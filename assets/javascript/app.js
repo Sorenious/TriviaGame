@@ -124,22 +124,27 @@ function submitAnswer(clicked) {
 
   setTimeout(function() {
     questionCounter++;
-    var otherChoices = 0;
-    $("#timer").css("display","inline-block");
-    $("#question").text(questions[questionCounter]);
-    $("#answers").css("display","block");
-    $("#image").css("display", "none");
-    $("#answer-"+correctChoice).text(correctAnswer[questionCounter]);
-    for (var i=1; i<=4; i++) {
-      if ($("#answer-"+i).text() === "") {
-        console.log("Z");
-        console.log(questionCounter);
-        var numberString = questionCounter.toString();
-        $("#answer-"+i).text(incorrectAnswers[numberString][otherChoices]);
-        otherChoices++;
+    if (questionCounter < 5){
+        var otherChoices = 0;
+        $("#timer").css("display","inline-block");
+        $("#question").text(questions[questionCounter]);
+        $("#answers").css("display","block");
+        $("#image").css("display", "none");
+        $("#answer-"+correctChoice).text(correctAnswer[questionCounter]);
+        for (var i=1; i<=4; i++) {
+          if ($("#answer-"+i).text() === "") {
+            console.log("Z");
+            console.log(questionCounter);
+            var numberString = questionCounter.toString();
+            $("#answer-"+i).text(incorrectAnswers[numberString][otherChoices]);
+            otherChoices++;
+          }
+        }
+        stopwatch.start();
+      } else {
+        $("#question").text("That's it. The quiz is over. Go home.");
+        $("#image").css("display", "none");
       }
-    }
-    stopwatch.start();
   }, 4000);
 };
 
