@@ -1,0 +1,88 @@
+html {
+	background-image: url(../images/trivia_background.jpg);
+	background-size: cover;
+	height: 100%;
+}
+
+body {
+	text-align: center;
+	width: 70%;
+	margin: 0 auto;
+	background-color: #DDDDAA;
+	height: 100%;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+#container {
+	flex: 1 0 auto;
+	position: relative;
+}
+
+#title {
+	font-size: 5em;
+	text-align: center;
+}
+
+#answers {
+	margin: 0 auto;
+	padding: 20px;
+}
+
+ol {
+	text-align: left;
+}
+
+#question {
+	margin: 0 auto;
+}
+
+h3 {
+	padding: 20px;
+}
+
+#submit-button {
+	padding: 5px 10px;
+	font-size: 20px;
+	border: 2px solid #CF22FF;
+	background-color: #00A;
+	color: #B15026;
+}
+
+#timer {
+  	font-family: monospace;
+  	font-size: 40px;
+  	color: green;
+
+  	/* Typography */
+  	text-align: center;
+
+  	/* Visual */
+  	background: #DDA;
+}
+
+#filler {
+  	font-family: monospace;
+  	font-size: 40px;
+  	color: #DDA;
+
+  	/* Typography */
+  	text-align: center;
+
+  	/* Visual */
+  	background: #DDA;
+}
+
+#image {
+	margin: 20px;
+  	background-image: url();
+  	background-size: contain;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	display: none;
+  	position: absolute;
+  	left: 23%;
+  	width: 50%;
+  	height: 50%;
+}
